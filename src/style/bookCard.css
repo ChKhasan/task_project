@@ -1,0 +1,6 @@
+@media screen and (max-width: 992px) {
+  .book_card div {
+    width: 300px;
+    margin-right: 30px;
+  }
+}

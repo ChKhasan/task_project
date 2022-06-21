@@ -1,0 +1,202 @@
+
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+    border: none !important;
+  }
+  #components-form-demo-normal-login .login-form-forgot {
+    float: right;
+    border: none !important;
+  }
+  #components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+    float: left;
+    border: none !important;
+  }
+  #components-form-demo-normal-login .login-form-button {
+    width: 100%;
+  }
+  
+  .text_input {
+    padding: 10px !important;
+    border-radius: 25px !important;
+    border: none !important;
+    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    /* background: rgba(0, 0, 0, 0.05) !important; */
+  }
+  .text_input input {
+    background: rgba(0, 0, 0, 0.01) !important;
+    width: 100% !important;
+  }
+  
+  .login_images {
+    position: relative;
+    /* background-image: url("../public/Images/3D-Cool-Plant-Desktop-Background-HD.jpg"); */
+    background-position: center;
+    background-size: cover;
+  }
+  .login_images img {
+    width: 100%;
+  }
+  @media (min-width: 1024px){
+    .login_block {
+      aspect-ratio: 1 / 0.5;
+    }
+  }
+  .login_block {
+    overflow: hidden;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
+  }
+  .backgroud_fluid {
+    background-color: rgba(0, 0, 0, 0.01);
+  }
+  .form_btn_full {
+    background: linear-gradient(45deg, #bb36fd, #9b00e8) !important;
+    color: #fff;
+    /* width: 230px !important; */
+    border: none !important;
+    display: flex !important;
+    padding: 10px !important;
+    height: inherit !important;
+    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
+    border-radius: 25px !important;
+    justify-content: center;
+    width: 100%;
+  }
+  .form_btn_full:hover {
+    background: linear-gradient(45deg, #c85bff, #b726ff) !important;
+  }
+  .form_btn_full:focus {
+    outline: none !important;
+  }
+  .title_login {
+    padding-bottom: 30px;
+    display: flex;
+    color: blueviolet;
+    justify-content: center;
+    font-size: 44px;
+    font-weight: 700;
+  }
+  
+  .loginLeft {
+    background-image: linear-gradient(45deg, #f046ff, #9b00e8);
+    border-radius: 25px;
+    color: rgb(192, 192, 192);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header_title {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginLeft header:first-child {
+    position: absolute;
+    font-size: 64px;
+    color: #fff;
+    font-weight: 800 !important;
+  
+    transform: translateX(-5px);
+  }
+  .loginLeft header:last-child {
+    position: absolute;
+    font-size: 64px;
+    font-weight: 800 !important;
+    color: #9b00e8;
+  }
+  .loginLeft h1 {
+    font-size: 44px;
+    color: #fff;
+    font-weight: 700 !important;
+  }
+  .loginRight {
+    background: #fff;
+    border-radius: 25px;
+    padding: 25px;
+    padding-left: 50px;
+  }
+  .regis_link {
+    margin-top: 5px;
+    color: #9b00e8;
+  }
+  .regis_link:hover {
+    color: #bb36fd !important;
+  }
+  .send_btn {
+    background: #149ddd !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+  .messages_tab {
+    position: relative !important;
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ced4da;
+  }
+  .to_regis {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: start;
+    background-image: linear-gradient(to right, #26baee, #149ddd) !important;
+    color: #fff !important;
+    padding: 10px 20px;
+    width: 200px !important;
+    border-radius: 25px;
+    transition: 5s !important;
+  }
+  .to_regis:hover {
+    transition: 5s !important;
+    display: flex;
+    background-image: linear-gradient(to right, #149ddd, #26baee) !important;
+  }
+  .to_login_modal .ant-modal-content,.to_login_modal .ant-modal-header{
+    border-radius: 25px !important;
+  }
+  .messenger {
+     height: 100vh !important;
+     display: flex !important;
+     flex-direction: column !important;
+     align-items: center !important;
+  
+     
+  }
+  .messenger a {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    /* box-shadow: -3px -3px 7px #ffffff73,3px 3px 5px rgba(94, 104, 121, .288); */
+    box-shadow: -3px -3px 7px #ffffff73,3px 3px 5px rgb(10, 161, 221,.288);
+    border-radius: 50%;
+    padding: 0 !important;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  
+  }
+  .messenger a svg{
+    /* animation: animate 5s linear infinite !important;  */
+    /* padding: 10px !important; */
+    font-size: 15px !important;
+    /* display: inline-block; */
+    padding-right: 0 !important;
+  
+  }
+  
+  

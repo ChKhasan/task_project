@@ -1,0 +1,14 @@
+.footer ul li{
+   font-size:  .875rem!important;
+   margin-bottom: 8px;
+}
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+.footer {
+    border-top: 1px solid #eae8e4!important;
+    padding: 4rem;
+  background: #F1FAF4;
+
+}

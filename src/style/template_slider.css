@@ -1,0 +1,13 @@
+
+.template_slider .slick-next::before,.template_slider .slick-prev::before {
+    color: grey !important;
+}
+.template_slider .css-heg063-MuiTabs-flexContainer {
+    display: flex;
+    justify-content: end;
+    background: #F1FAF4;
+}
+.template_slider h6 {
+    margin-bottom: 0 !important;
+    font-size: 1.875rem;
+}

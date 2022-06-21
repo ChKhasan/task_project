@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import CarouselBanner from "./comps/CarouselBanner";
+import Navbar from "./comps/Navbar";
+import SliderTemplate from "./comps/SliderTemplate";
+import './style/slickCarousel.css'
+import './style/template_slider.css'
+import FullPages from './pages'
+import './style/loginp.css'
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FullPages />
+
     </div>
   );
 }
