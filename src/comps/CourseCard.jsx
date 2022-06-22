@@ -1,21 +1,49 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
 import { Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { postUserCourseData } from "../redux/actions/courseAction";
+import { API_IMG } from "../const/API";
+import "../style/courseCard.css"
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ bool, course }) => {
   const dispatch = useDispatch();
   const sendId = (courseId) => {
     dispatch(postUserCourseData(courseId));
-    console.log(courseId);
   };
   return (
-    <Card
+    <>
+      {" "}
+      <div>
+        <div className="course_card mt-3 py-4 px-1">
+          <div className="course_card_in">
+            <div className="row">
+
+            <div className="course_card_title col-6 mt-3 d-flex flex-column align-items-center">
+              <h4> {course.name}</h4>
+              <p className="course_desc"> {course.description}</p>
+            </div>
+            <div className="course_card_img col-6">
+              <img
+                src={course.imgUrl.length > 50 ? course.imgUrl:(course.imgUrl && `${API_IMG}/${course.imgUrl}`)}
+                alt=""
+              />
+            </div>
+            </div>
+            <div className="course_info d-flex mt-2 justify-content-center">
+              {bool ? (
+                <Button>{course.createdAt}</Button>
+              ) : (<>
+            
+                <Button>{course.createdAt}</Button>
+                <br/>
+           
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <Card
       sx={{ display: "flex" }}
       className="mt-4 justify-content-between "
       style={{ height: "200px" }}
@@ -47,7 +75,8 @@ const CourseCard = ({ course }) => {
         image={course.imgUrl}
         alt="Live from space album cover"
       />
-    </Card>
+    </Card> */}
+    </>
   );
 };
 

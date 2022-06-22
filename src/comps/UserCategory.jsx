@@ -6,7 +6,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import BookCard from "./BookCard";
+import BookCards from "./BookCards";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -78,7 +78,7 @@ const UserCategory = () => {
               {item.books.map((book, bookIndex) => {
                   return (
                     <div className="col-xl-4 col-md-6  d-md-block justify-content-center">
-                      <BookCard book={book} key={bookIndex} />
+                      <BookCards book={book} key={bookIndex} />
                     </div>
                   );
                 })}

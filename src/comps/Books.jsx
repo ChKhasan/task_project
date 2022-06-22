@@ -5,6 +5,7 @@ import BookCard from "./BookCard";
 import Typography from '@mui/material/Typography';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import BookCards from "./BookCards";
 
 const Books = () => {
   const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const Books = () => {
           book.data.map((item, index) => {
             return (
               <div className="col-xl-4 col-md-6 d-flex d-md-block justify-content-center" key={index}>
-                <BookCard
+                <BookCards
                   book={item}
                   className="d-flex justify-content-between"
                 />
@@ -39,7 +40,7 @@ const Books = () => {
       </div>
       <div className="row">
       <Stack spacing={2}>
-      <Pagination count={Math.floor(book.total/6)} page={page} onChange={handleChange} />
+      <Pagination count={Math.ceil(book.total/6)} page={page} onChange={handleChange} />
     </Stack>
       </div>
     </div>

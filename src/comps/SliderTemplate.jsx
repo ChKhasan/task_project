@@ -6,7 +6,10 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import ScrollContainer from "react-indiana-drag-scroll";
 import { useSelector } from "react-redux";
-const SliderTemplate = () => {
+import BookCards from "./BookCards";
+import { Link } from "react-router-dom";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+const SliderTemplate = ({ children ,name}) => {
   const [value, setValue] = React.useState("one");
 
   const handleChange = (event, newValue) => {
@@ -22,45 +25,25 @@ const SliderTemplate = () => {
     autoplaySpeed: 2000,
   };
 
-  const book = useSelector((state) => state.book.book_data);
 
   return (
     <div className="container mt-5 ">
       <div className="template_slider">
         <div className="row">
           <div className="col-6 d-flex align-items-end">
-            <h6>Books</h6>
+            <h6 style={{fontSize: "2rem"}}>{name}</h6>
           </div>
-          <div className="col-6">
-            <Box sx={{ width: "100%", bgcolor: "background.paper" }}>
-              <Tabs
-                value={value}
-                onChange={handleChange}
-                aria-label="secondary tabs example"
-                className="d-flex justify-content-end"
-              >
-                {/* <Tab value="one" label="Item One" />
-                <Tab value="two" label="Item Two" />
-                <Tab value="three" label="Item Three" /> */}
-              </Tabs>
-            </Box>
+          <div className="col-6 d-flex align-items-end justify-content-end">
+            <Link to="/" className="show_all">Barchasini ko'rish <NavigateNextIcon /></Link>
           </div>
         </div>
         <div className="row m-4">
           <div className="col-12 d-none d-lg-block">
-            <Slider {...settings}>
-              {book.data &&
-                book.data.map((item, index) => {
-                  return <BookCard book={item} key={index} />
-                })}
-            </Slider>
+            <Slider {...settings}>{children}</Slider>
           </div>
           <div className="col-12 d-lg-none">
             <ScrollContainer className="scroll-container d-flex flex-row">
-            {book.data &&
-                book.data.map((item, index) => {
-                  return <BookCard book={item} key={index} />
-                })}
+              {children}
             </ScrollContainer>
           </div>
         </div>

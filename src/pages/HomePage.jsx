@@ -1,26 +1,35 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import CarouselBanner from '../comps/CarouselBanner'
-import SliderTemplate from '../comps/SliderTemplate'
-import { getAuthorData } from '../redux/actions/authorAction';
-import { getBookData } from '../redux/actions/bookAction';
-import { getCategoryData } from '../redux/actions/categoryAction';
-import { getCourseData } from '../redux/actions/courseAction';
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import AuthorCard from "../comps/AuthorCard";
+import BookCards from "../comps/BookCards";
+import CarouselBanner from "../comps/CarouselBanner";
+import ForUs from "../comps/ForUs";
+import SliderTemplate from "../comps/SliderTemplate";
 
 const HomePage = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getCourseData());
-    dispatch(getCategoryData());
-    dispatch(getAuthorData());
-    dispatch(getBookData(1));
-  }, []);
-  return (
-    <div className='container-fluid bac_color'>
-<CarouselBanner />
-<SliderTemplate />
-    </div>
-  )
-}
+  const book = useSelector((state) => state.book.book_data);
+  const author = useSelector((state) => state.author.author_data);
 
-export default HomePage
+  return (
+    <div className="container-fluid bac_color">
+      <CarouselBanner />
+      <SliderTemplate name="Books">
+        {" "}
+        {book.data &&
+          book.data.map((item, index) => {
+            return <BookCards book={item} key={index} />;
+          })}
+      </SliderTemplate>
+      <ForUs />
+      <SliderTemplate name="Authors">
+        {" "}
+        {author.data &&
+          author.data.map((item, index) => {
+            return <AuthorCard item={item} key={index} />;
+          })}
+      </SliderTemplate>
+    </div>
+  );
+};
+
+export default HomePage;

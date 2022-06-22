@@ -1,6 +1,44 @@
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .book_card div {
     width: 300px;
     margin-right: 30px;
   }
+} */
+.book_card {
+  width: 255px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  border-right: 1px solid #eae8e4;
+  border-bottom: 1px solid #eae8e4;
+  margin: 0 0.65rem !important;
+  background: white;
+}
+.book_card_img {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 200px ;
+}
+.book_card_img img {
+  width: 80%;
+  /* border-radius: 50%; */
+}
+.book_info a {
+  display: inline-block;
+  width: 80%;
+  text-align: center;
+  border: 1px solid #24aa49 !important;
+  padding: 2px 10px;
+  border-radius: 0.2rem !important;
+  color: #24aa49 !important;
+}
+.book_info a:hover {
+  border: 1px solid #24aa49 !important;
+  background: #24aa49 !important;
+  color: #fff !important;
+}
+.show_all {
+  color: #24aa49 !important;
+  font-size: 1rem;
 }

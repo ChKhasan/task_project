@@ -113,6 +113,20 @@
     font-weight: 800 !important;
     color: #9b00e8;
   }
+  .loginLeft  a:first-child {
+    position: absolute;
+    font-size: 64px;
+    color: #fff;
+    font-weight: 800 !important;
+  
+    transform: translateX(-5px);
+  }
+  .loginLeft  a:last-child {
+    position: absolute;
+    font-size: 64px;
+    font-weight: 800 !important;
+    color: #9b00e8;
+  }
   .loginLeft h1 {
     font-size: 44px;
     color: #fff;

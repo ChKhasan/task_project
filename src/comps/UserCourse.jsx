@@ -9,6 +9,7 @@ const UserCourse = () => {
   useEffect(() => {
     dispatch(getUserCourseData());
   }, []);
+  console.log(course);
   return (
     <div className="row">
       <div className="row">
@@ -19,7 +20,7 @@ const UserCourse = () => {
           course.map((item, index) => {
             return (
               <div className="col-xl-4 col-md-6" key={index}>
-                <CourseCard
+                <CourseCard bool={true}
                   course={item}
                   className="d-flex justify-content-between"
                 />

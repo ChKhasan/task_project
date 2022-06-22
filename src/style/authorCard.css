@@ -1,0 +1,37 @@
+.author_card {
+    width: 255px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-right: 1px solid #eae8e4;
+    border-bottom: 1px solid #eae8e4;
+    margin: 0 0.65rem !important;
+    background: white;
+}
+
+.author_card_img {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 200px ;
+}
+/* .author_card_in {
+    width: 100% !important;
+} */
+.author_card_img img {
+    width: 80%;
+    border-radius: 50%;
+    /* aspect-ratio: 1/1; */
+
+}
+.author_info a{
+    border: 1px solid #24AA49 !important;
+    padding: 2px 10px;
+    border-radius: 0.2rem !important;
+    color: #24AA49 !important;
+}
+.author_info a:hover{
+    border: 1px solid #24AA49 !important;
+    background: #24AA49 !important;
+    color: #fff !important;
+}

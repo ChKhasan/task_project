@@ -1,0 +1,18 @@
+.navbar a {
+    font-size: 1rem;
+    color: #19110b !important;
+    font-weight: 500 !important;
+}
+.navbar a:hover {
+   color: #24AA49!important
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+.navbar ul li {
+    margin: 0 24px;
+}
+.drawer_link a{
+color: #19110b !important;
+}

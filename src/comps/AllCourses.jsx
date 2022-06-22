@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCourseData } from '../redux/actions/courseAction'
+import { getCourseData, getCoursePartsData } from '../redux/actions/courseAction'
 import CourseCard from './CourseCard'
+import CoursePartsCard from './CoursePartsCard'
 
 const AllCourses = () => {
     const dispatch = useDispatch()
-    const course = useSelector(state => state.course.all_course)
+    const course = useSelector(state => state.course.course_parts)
     const cours = useSelector(state => state.course)
     useEffect(() => {
-      dispatch(getCourseData())
+      dispatch(getCoursePartsData(1))
     },[])
+    console.log(course);
   return (
     <div className='row'>
         <div className='row'>
@@ -19,7 +21,7 @@ const AllCourses = () => {
   {
     course.data &&  course.data.map((item,index) => {
         return  <div className="col-xl-4 col-md- " key={index}>
-        <CourseCard course={item} className="d-flex justify-content-between"/>
+        <CoursePartsCard course={item} className="d-flex justify-content-between"/>
     </div>
     })
   }
