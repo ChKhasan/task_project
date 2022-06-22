@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Input, Button, InputNumber } from "antd";
+import { Form, Input, Button } from "antd";
 import { API_URL, TOKEN_USER } from "../const/API";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -44,9 +44,8 @@ const RegistrationP = () => {
               <div className="col-lg-6 d-none d-lg-flex login_images loginLeft">
                 <h1>Welcome to</h1>
                 <div className="header_title">
-                <Link to="/">Westco</Link>
-                <Link to="/">Westco</Link>
-
+                  <Link to="/">Westco</Link>
+                  <Link to="/">Westco</Link>
                 </div>
               </div>
               <div className="col-lg-6 d-flex loginRight d-flex justify-content-center align-items-center">

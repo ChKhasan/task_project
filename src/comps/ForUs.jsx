@@ -23,28 +23,31 @@ const ForUs = () => {
         <h1>Biz haqimizda</h1>
       </div>
       <div className="row for_us">
-        <div className="col-12  px-4 py-4">
-         
-        </div>
+        <div className="col-12  px-4 py-4"></div>
         <div className="col-12 row">
-          <div className="col-3 position-relative">
-            {/* <AuthorCard item={author && author[0]} /> */}
-            <img style={{width: "100%"}} src="/Images/2560.webp" alt="" />
+          <div className="col-xl-3 col-lg-6 mt-4 position-relative">
+            <img style={{ width: "100%" }} src="/Images/2560.webp" alt="" />
           </div>
-          <div className="col-6">
-          <span>
-            Siz uzingizga kerak bo'lgan kurs va kitoblarni topishingiz ,
-            kitoblardan elektron foydalanish va kurslarga yozilish imkoniyatlari
-            bor
-          </span>
+          <div className="col-xl-6 col-lg-6 mt-4">
+            <span>
+              Siz uzingizga kerak bo'lgan kurs va kitoblarni topishingiz ,
+              kitoblardan elektron foydalanish va kurslarga yozilish
+              imkoniyatlari bor
+            </span>
           </div>
-          <div className="col-3 position-relative">
-            {/* <BookCards book={book && book[0]} /> */}
-            <img style={{width: "100%"}} src="/Images/70s-authors.jpg" alt="" />
+          <div className="col-xl-3 mt-4 position-relative">
+            <img
+              style={{ width: "100%" }}
+              src="/Images/70s-authors.jpg"
+              alt=""
+            />
           </div>
-          <div className="col-12 position-relative">
-<img style={{width: "100%"}} src="/Images/depositphotos_155833828-stock-photo-set-of-colored-balls-with.jpg" alt="" />
-          {/* <CoursePartsCard course={course && course[0]} /> */}
+          <div className="col-12 mt-4 position-relative">
+            <img
+              style={{ width: "100%" }}
+              src="/Images/depositphotos_155833828-stock-photo-set-of-colored-balls-with.jpg"
+              alt=""
+            />
           </div>
         </div>
       </div>

@@ -62,10 +62,10 @@ const CoursePartsCard = ({ course }) => {
               </div>
               <div className="course_card_img col-6">
                 <img
-                  src={
-                    course.imgUrl.length > 50
+                  src={course.imgUrl &&
+                   ( course.imgUrl.length > 50
                       ? course.imgUrl
-                      : course.imgUrl && `${API_IMG}/${course.imgUrl}`
+                      : `${API_IMG}/${course.imgUrl}`)
                   }
                   alt=""
                 />
